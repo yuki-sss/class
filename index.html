@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>Hello World</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クラスとインスタンス</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="accordion" id="js-faq">
+      <p class="accordion-trigger">Q1.aaaa</p>
+      <div class="accordion-contents">A1.aaaa</div>
+      <p class="accordion-trigger">Q2.aaaa</p>
+      <div class="accordion-contents">A2.aaaa</div>
+    </div>
+    <br /><br />
+
+    <div class="accordion" id="js-accordion">
+      <a href="" class="accordion-trigger"> Q1.eeee </a>
+      <div class="accordion-contents">A1.eeee</div>
+      <a href="" class="accordion-trigger"> Q2.ffff </a>
+      <div class="accordion-contents">A2.kkkk</div>
+      <a href="" class="accordion-trigger"> Q2.ffff </a>
+      <div class="accordion-contents">A2.kkkk</div>
+    </div>
+    <br /><br />
+    <dl class="accordion" id="js-accordion-mini">
+      <dt class="accordion-trigger">Q1.aaaa</dt>
+      <dd class="accordion-contents">A2.kkkk</dd>
+    </dl>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
