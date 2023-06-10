@@ -8,27 +8,127 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="accordion" id="js-faq">
-      <p class="accordion-trigger">Q1.aaaa</p>
-      <div class="accordion-contents">A1.aaaa</div>
-      <p class="accordion-trigger">Q2.aaaa</p>
-      <div class="accordion-contents">A2.aaaa</div>
-    </div>
-    <br /><br />
+    <div class="body">
+      <div class="header">Javascript</div>
+      <div class="accordion" id="js-faq">
+        <p class="accordion-trigger">変数（定数）</p>
+        <div class="accordion-contents">const unko = 'unko';</div>
+        <p class="accordion-trigger">変数</p>
+        <div class="accordion-contents">let unko = 'unko2';</div>
+        <p class="accordion-trigger">配列</p>
+        <div class="accordion-contents">const inoki = [1,2,3];</div>
+        <p class="accordion-trigger">配列を呼ぶ</p>
+        <div class="accordion-contents">console.log(inoki[2]);</div>
+        <p class="accordion-trigger">関数</p>
+        <div class="accordion-contents">
+          const test = () => {
+          <br />
+          console.log('Hi!');<br />
+          }
+        </div>
+        <p class="accordion-trigger">関数を呼ぶ</p>
+        <div class="accordion-contents">test();</div>
+        <p class="accordion-trigger">関数（引数）</p>
+        <div class="accordion-contents">
+          const sayHello = (name) => {<br />
+          console.log('Hello! ' + name);<br />
+          }
+        </div>
+        <p class="accordion-trigger">関数を呼ぶ</p>
+        <div class="accordion-contents">
+          sayHello('Yumiko') // Hello! Yumiko <br />
+          sayHello('Ken') // Hello! Ken
+        </div>
+        <p class="accordion-trigger">オブジェクト</p>
+        <div class="accordion-contents">
+          const person = {<br />
+          name: 'Ken', //プロパティ<br />
+          height: 100,<br />
+          weight: 40,<br />
+          sayHello: (name) => { //メソッド<br />
+          console.log('Hello! ' + name); } <br />
+          }
+        </div>
+        <p class="accordion-trigger">
+          オブジェクト内のプロパティやメソッドを参照
+        </p>
+        <div class="accordion-contents">
+          console.log(person.name) //Ken <br />
+          console.log(person.weight) //40 <br />
+          person.sayHello('Ken') // Hello! Ken
+        </div>
+        <p class="accordion-trigger">windowオブジェクトの中身</p>
+        <div class="accordion-contents">
+          window = { <br />
+          alert: (arg) => { ... }, <br />
+          innerHeight: 683, <br />
+          innerWeight: 1327, <br />
+          }
+        </div>
+        <p class="accordion-trigger">ループ文 1</p>
+        <div class="accordion-contents">
+          for (var i = Things.length - 1; i >= 0; i--) { <br />
+          Things[i] <br />
+          }
+        </div>
+        <p class="accordion-trigger">ループ文 2</p>
+        <div class="accordion-contents">
+          let i = 0; while (i < Things.length - 1){ <br />
+          Things[i] i++; <br />
+          }
+        </div>
+        <p class="accordion-trigger">条件分岐</p>
+        <div class="accordion-contents">f(条件式) { … } else { … }</div>
+      </div>
+      <br /><br />
 
-    <div class="accordion" id="js-accordion">
-      <a href="" class="accordion-trigger"> Q1.eeee </a>
-      <div class="accordion-contents">A1.eeee</div>
-      <a href="" class="accordion-trigger"> Q2.ffff </a>
-      <div class="accordion-contents">A2.kkkk</div>
-      <a href="" class="accordion-trigger"> Q2.ffff </a>
-      <div class="accordion-contents">A2.kkkk</div>
+      <div class="mes">メソッド</div>
+
+      <div class="accordion" id="js-accordion">
+        <a href="" class="accordion-trigger">slice()</a>
+        <div class="accordion-contents">
+          配列の一部を start から end （end
+          は含まれない）までの範囲で、選択した新しい配列オブジェクトにシャローコピーして返します。<br />
+          const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];<br />
+          console.log(animals.slice(2)); <br />
+          // Expected output: Array ["camel","duck", "elephant"] <br />
+          console.log(animals.slice(2, 4)); <br />
+          // Expected output: Array ["camel", "duck"]
+        </div>
+        <a href="" class="accordion-trigger">toString()</a>
+        <div class="accordion-contents">
+          オブジェクトを表す文字列を返します。<br />
+          function Dog(name) {<br />
+          this.name = name;<br />
+          } <br />
+          const dog1 = new Dog('Gabby');<br />
+          Dog.prototype.toString = function dogToString() {<br />
+          return `${this.name}`;<br />
+          };<br />
+          console.log(dog1.toString());<br />
+          // Expected output: "Gabby"
+        </div>
+        <a href="" class="accordion-trigger">toUpperCase()</a>
+        <div class="accordion-contents">
+          呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。<br />
+          const sentence = 'The quick brown fox jumps over the lazy dog.';<br />
+          console.log(sentence.toUpperCase());<br />
+          // Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="memo">メモ</div>
+      <dl class="accordion" id="js-accordion-mini">
+        <dt class="accordion-trigger">Memo</dt>
+        <dd class="accordion-contents">
+          aaaaaaaa <br />
+          vvvvvvv <br />
+          nnnnnnnn <br />
+          ggggggg
+        </dd>
+      </dl>
     </div>
-    <br /><br />
-    <dl class="accordion" id="js-accordion-mini">
-      <dt class="accordion-trigger">Q1.aaaa</dt>
-      <dd class="accordion-contents">A2.kkkk</dd>
-    </dl>
     <script src="./app.js"></script>
   </body>
 </html>
